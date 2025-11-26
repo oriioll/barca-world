@@ -1,14 +1,14 @@
 /* ======================================= */
-/* 1. FONT IMPORTS Y DECLARACIÓN LOCAL */
+/* 1. FONT IMPORTS AND LOCAL DECLARATION */
 /* ======================================= */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
 
-/* --- Fuente de Dorsales FCB (Oficial o Réplica) --- */
+/* --- FCB NUMBERS FONT (replica) --- */
   @font-face {
     font-family: 'FCB-Play';
-    src: url('../assets/fonts/fcb-numbers.woff2') format('woff2'), /* 1. Mejor compatibilidad y rendimiento */
-         url('../assets/fonts/fcb-numbers.woff') format('woff'),  /* 2. Buena compatibilidad */
-         url('../assets/fonts/fcb-numbers.otf') format('opentype'); /* 3. Tu archivo original */
+        src: url('../assets/fonts/fcb-numbers.woff2') format('woff2'), /* 1. Best compatibility and performance */
+          url('../assets/fonts/fcb-numbers.woff') format('woff'),  /* 2. Good compatibility */
+          url('../assets/fonts/fcb-numbers.otf') format('opentype'); /* 3. Your original file */
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -18,24 +18,56 @@
 /* ---------------------------------------------------- */
 
 /* ======================================= */
-/* 2. PALETA DE COLORES (HOME KIT - Elegant) */
+/* 2. COLOR PALETTE (HOME KIT - Elegant) */
 /* ======================================= */
 :root {
-    /* -- Colores Base -- */
-    --bg-light: #F4F6F8;       /* Fondo principal (Blanco Hielo/Muy claro) */
-    --bg-dark: #1A252F;        /* Fondo para cards / Contraste */
-    --text-dark: #1A252F;      /* Texto principal */
-    --text-light: #F4F6F8;     /* Texto para fondos oscuros */
+    /* -- Base Colors -- */
+    --bg-light: #F3F6FA;       /* Main background (Ice white / Very light) */
+    --bg-dark: #1A252F;        /* Background for cards / Contrast */
+    --text-dark: #1A252F;      /* Primary text */
+    --text-light: #F4F6F8;     /* Text for dark backgrounds */
+    --bg-fade-color: #E6EEF5;  /* Auxiliar color for the fade*/
+    --bg-gradient: linear-gradient(
+            90deg,                              
+            var(--fcb-navy) 0%,                           
+            var(--fcb-garnet) 100%            
+        );
 
-    /* -- Colores FCB (Desaturados) -- */
-    --fcb-navy: #2e4f70;       /* Azul Noche (Elegante, sustituye al azul chillón) */
-    --fcb-garnet: #C05D68;     /* Granate Pastel (Sofisticado, tirando a rosado/terracota) */
+    /* -- FCB Colors (Desaturated) -- */
+    --fcb-navy: #2e4f70;       /* Night blue (Elegant, replaces the bright blue) */
+    --fcb-garnet: #C05D68;     /* Pastel garnet (Sophisticated, leaning pink/terracotta) */
 
-    /* -- Acentos / Detalles -- */
-    --fcb-gold: #E3C676;       /* Dorado Champán (Para números, detalles, bordes) */
-    --accent-ui: var(--fcb-navy); /* Usamos el azul principal como acento UI por defecto */
+    /* -- Accents / Details -- */
+    --fcb-gold: #E3C676;       /* Champagne gold (For numbers, details, borders) */
+    --fcb-numbers: #FBC647;
+    --accent-ui: var(--fcb-navy); /* We use the main blue as the default UI accent */
 
-    /* -- Tipografía -- */
+    /* -- Typography -- */
     --font-main: 'Montserrat', sans-serif;
-    --font-numbers: 'FCB-Play', sans-serif; /* Usaremos la del Barça aquí */
+    --font-numbers: 'FCB-Play', sans-serif; /* We'll use Barça's here */
+}
+/* ======================================= */
+/* 2. GENERAL AND BODY STYLES */
+/* ======================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*SIZE, COLORS AND FONTS FOR BODY*/
+    height: auto;
+    width: 100%;
+    background: var(--bg-gradient);
+    color: var(--text-light);
+    font-size: 16px;
+    font-family: var(--font-main);
+
+    /*FLEX PROPERTIES*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
 }
