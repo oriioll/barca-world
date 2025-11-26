@@ -84,6 +84,7 @@ header {
     width: 100%;
     color: var(--fcb-numbers);
     padding: 20px;
+    text-align: center;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -124,6 +125,7 @@ footer {
     width: 100%;
     font-size: 1.3rem;
     font-weight: bold;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,6 +144,7 @@ footer a{
 main {
     height: auto;
     width: 100%;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
