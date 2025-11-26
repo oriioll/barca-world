@@ -39,3 +39,5 @@
     --font-main: 'Montserrat', sans-serif;
     --font-numbers: 'FCB-Play', sans-serif; /* Usaremos la del Barça aquí */
 }
+html {
+    background-color: var(--bg-light);
