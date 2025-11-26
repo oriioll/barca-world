@@ -1,0 +1,41 @@
+/* ======================================= */
+/* 1. FONT IMPORTS Y DECLARACIÓN LOCAL */
+/* ======================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+
+/* --- Fuente de Dorsales FCB (Oficial o Réplica) --- */
+  @font-face {
+    font-family: 'FCB-Play';
+    src: url('../assets/fonts/fcb-numbers.woff2') format('woff2'), /* 1. Mejor compatibilidad y rendimiento */
+         url('../assets/fonts/fcb-numbers.woff') format('woff'),  /* 2. Buena compatibilidad */
+         url('../assets/fonts/fcb-numbers.otf') format('opentype'); /* 3. Tu archivo original */
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    ascent-override: 100%;
+  }
+
+/* ---------------------------------------------------- */
+
+/* ======================================= */
+/* 2. PALETA DE COLORES (HOME KIT - Elegant) */
+/* ======================================= */
+:root {
+    /* -- Colores Base -- */
+    --bg-light: #F4F6F8;       /* Fondo principal (Blanco Hielo/Muy claro) */
+    --bg-dark: #1A252F;        /* Fondo para cards / Contraste */
+    --text-dark: #1A252F;      /* Texto principal */
+    --text-light: #F4F6F8;     /* Texto para fondos oscuros */
+
+    /* -- Colores FCB (Desaturados) -- */
+    --fcb-navy: #2e4f70;       /* Azul Noche (Elegante, sustituye al azul chillón) */
+    --fcb-garnet: #C05D68;     /* Granate Pastel (Sofisticado, tirando a rosado/terracota) */
+
+    /* -- Acentos / Detalles -- */
+    --fcb-gold: #E3C676;       /* Dorado Champán (Para números, detalles, bordes) */
+    --accent-ui: var(--fcb-navy); /* Usamos el azul principal como acento UI por defecto */
+
+    /* -- Tipografía -- */
+    --font-main: 'Montserrat', sans-serif;
+    --font-numbers: 'FCB-Play', sans-serif; /* Usaremos la del Barça aquí */
+}
