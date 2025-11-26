@@ -59,8 +59,8 @@
 body {
     /*SIZE, COLORS AND FONTS FOR BODY*/
     height: auto;
-    width: 100%;
-    background: var(--bg-gradient);
+    max-width: 100%;
+    background: var(--bg-gradient) no-repeat;
     color: var(--text-light);
     font-size: 16px;
     font-family: var(--font-main);
@@ -132,4 +132,75 @@ footer a{
     color: var(--text-light);
     text-decoration: none;
     transition: all .3s ease;
+}
+
+/* ======================================= */
+/* 5. MAIN CONTAINER STYLES */
+/* ======================================= */
+
+main {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+/* ======================================= */
+/* 6. PLAYERS CARROUSEL STYLES */
+/* ======================================= */
+
+
+main .carrousel {
+    height: auto;
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.carrousel hr {
+    width: 45%;
+    height: 2px;
+    background: var(--fcb-gold);
+    border: none;
+}
+.carrousel h2 {
+    font-size: 2.5rem;
+    color: var(--fcb-gold);
+}
+
+.goalkeepers, .defenders, .midfielders, .forwards {
+    height: auto;
+    width: 100%;
+    font-size: 2rem;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.goalkeepersCarrousel, .defendersCarrousel, .midfieldersCarrousel, .forwardsCarrousel {
+    height: 430px;
+    width: 75%;
+    display: flex;
+}
+
+.goalkeepersCarrousel img, .defendersCarrousel img, .midfieldersCarrousel img, .forwardsCarrousel img {
+    width: 0;
+    flex-grow: 1;
+    object-fit: contain;
+    opacity: .8;
+    transition: all .5s ease;
+    flex-wrap: wrap;
+}
+.goalkeepersCarrousel img:hover, .defendersCarrousel img:hover, .midfieldersCarrousel img:hover, .forwardsCarrousel img:hover {
+   flex-grow: 1.5;
+   opacity: 1;
 }
