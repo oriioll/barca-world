@@ -152,6 +152,21 @@ main {
     gap: 25px;
 }
 
+.svg {
+    display: flex;
+    gap: 20px;
+}
+
+.svg svg {
+    transition: all .3s ease;
+}
+
+.svg svg:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
 /* ======================================= */
 /* 6. PLAYERS CARROUSEL STYLES */
 /* ======================================= */
