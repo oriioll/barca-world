@@ -178,6 +178,32 @@ main {
     transform: scale(1.1);
 }
 
+.player-info-display {
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.player-info-display.active {
+    opacity: 1;
+}
+
+.player-name-display {
+    font-weight: 400;
+    font-size: 2.5rem;
+    font-family: var(--font-numbers);
+}
+
+.player-number-display {
+    font-weight: 400;
+    font-size: 10rem; 
+}
 
 /* ======================================= */
 /* 6. PLAYERS CARROUSEL STYLES */

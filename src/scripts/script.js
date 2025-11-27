@@ -54,6 +54,12 @@ function setColorsToFcb() {
             if (title) title.style.color = 'var(--text-light)';
         };
     });
+
+    handlePlayerInfoDisplay(
+        'var(--fcb-numbers)',                  // Color para el nombre
+        'var(--fcb-numbers)',       // Color para el número (Home Kit)
+        'var(--font-numbers)'       // Fuente para el número
+    );
 }
 
 function setColorsToKobe() {
@@ -107,6 +113,12 @@ function setColorsToKobe() {
             if (title) title.style.color = 'var(--text-dark-away)';
         };
     });
+
+    handlePlayerInfoDisplay(
+        'var(--fcb-numbers-away)',    // Color para el nombre
+        'var(--fcb-numbers-away)',    // Color para el número (Kobe)
+        'var(--font-numbers)'
+    );
 }
 
 function setColorsToTotal90() {
@@ -160,6 +172,12 @@ function setColorsToTotal90() {
             if (title) title.style.color = 'var(--text-dark-third)';
         };
     });
+
+    handlePlayerInfoDisplay(
+        'var(--fcb-numbers-third)',    // Color para el nombre
+        'var(--fcb-numbers-third)',    // Color para el número (Kobe)
+        'var(--font-numbers)'
+    );
 }
 
 //Get all icons id
@@ -179,3 +197,61 @@ if (kobeButton) {
 if (total90Button) {
   total90Button.addEventListener('click', () => setColorsToTotal90());
 }
+
+
+function handlePlayerInfoDisplay(nameTextColor, numberColor, numberFont) {
+    const playerImages = document.querySelectorAll(
+        '.goalkeepersCarrousel img, .defendersCarrousel img, .midfieldersCarrousel img, .forwardsCarrousel img'
+    );
+
+    // Aplicar estilos globales
+    document.querySelectorAll('.player-name-display').forEach(el => {
+        el.style.color = nameTextColor;
+    });
+    document.querySelectorAll('.player-number-display').forEach(el => {
+        el.style.color = numberColor;
+        el.style.fontFamily = numberFont;
+    });
+
+    playerImages.forEach(img => {
+        img.addEventListener("mouseover", function() {
+            const section = this.closest('section'); 
+            const infoContainer = section.querySelector('.player-info-display');
+            if (!infoContainer) return;
+
+            const nameDisplay = infoContainer.querySelector('.player-name-display');
+            const numberDisplay = infoContainer.querySelector('.player-number-display');
+
+            // Insertar texto dinámico
+            nameDisplay.textContent = this.alt;  
+            numberDisplay.textContent = this.dataset.number;
+
+            // Aplicar Circletype al nombre (curvado/wavy)
+            const arco = new CircleType(nameDisplay);
+            arco.radius(400); // ajusta el radio del arco
+
+            infoContainer.classList.add('active');
+        });
+
+        img.addEventListener("mouseout", function() {
+            const section = this.closest('section');
+            const infoContainer = section.querySelector('.player-info-display');
+            if (!infoContainer) return;
+
+            const nameDisplay = infoContainer.querySelector('.player-name-display');
+            const numberDisplay = infoContainer.querySelector('.player-number-display');
+
+            // Limpiar texto
+            nameDisplay.textContent = '';
+            numberDisplay.textContent = '';
+
+            infoContainer.classList.remove('active');
+        });
+    });
+}
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    setColorsToFcb(); 
+});
