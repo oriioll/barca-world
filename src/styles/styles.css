@@ -42,9 +42,20 @@
     --fcb-numbers: #FBC647;
     --accent-ui: var(--fcb-navy); /* We use the main blue as the default UI accent */
 
+    /*KOBE BRYANT AWAY KIT THEME*/
+    --bg-light-away: #d4bd99;
+    --text-dark-away: #232323;
+    --accent-ui: #333BAF;
+    --fcb-numbers-away: #181733;
+
+    /*TOTAL 90 THIRD KIT THEME */
+    --bg-third: #FF6756;
+    --text-dark-third: #40456A;
+    --fcb-numbers-third: #2D213C;
+
     /* -- Typography -- */
     --font-main: 'Montserrat', sans-serif;
-    --font-numbers: 'FCB-Play', sans-serif; /* We'll use Barça's here */
+    --font-numbers: 'FCB-Play', sans-serif; 
 }
 
 /* ======================================= */
@@ -62,6 +73,7 @@ body {
     height: auto;
     width: 100%;
     background: var(--bg-gradient) no-repeat;
+    vertical-align: top;
     color: var(--text-light);
     font-size: 16px;
     font-family: var(--font-main);
