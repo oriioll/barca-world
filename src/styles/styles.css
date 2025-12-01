@@ -210,7 +210,7 @@ main {
 /* ======================================= */
 
 
-main .carrousel {
+main .carrousel, main .field {
     height: auto;
     width: 100%;
     padding-top: 20px;
@@ -220,13 +220,13 @@ main .carrousel {
     align-items: center;
     gap: 20px;
 }
-.carrousel hr {
+.carrousel hr, .field hr {
     width: 45%;
     height: 2px;
     background: var(--fcb-gold);
     border: none;
 }
-.carrousel h2 {
+.carrousel h2, .field h2 {
     font-size: 2.5rem;
     color: var(--fcb-gold);
 }
@@ -340,3 +340,97 @@ h2, h3, hr, p {
     animation-timeline: --reveal;
     animation-range: entry 25% cover 50%;
 }
+
+/* ======================================= */
+/* 9. FOOTBALL FIELD SECTION */
+/* ======================================= */
+
+.field svg {
+    transform: rotate(90deg);
+}
+
+.fieldContainer {
+    width: auto;
+    height: auto;
+    position: relative;
+    width: 100%;
+}
+
+.field .fieldContainer img {
+    position: absolute;
+    width: 10%;
+    mask-image: linear-gradient(to bottom, black 70%, transparent 75%);
+    transition: all .3s ease-in-out;
+}
+
+.field .fieldContainer img:hover {
+    transform: scale(1.2);
+}
+
+.p13 {
+    bottom: 7.5%;
+    position: absolute;
+    left: 45%; 
+} 
+
+.p3 {
+    bottom: 25%;
+    position: absolute;
+    left: 27.5%; 
+} 
+
+.p24 {
+    bottom: 20%;
+    position: absolute;
+    left: 37.5%; 
+} 
+
+.p5 {
+    bottom: 20%;
+    position: absolute;
+    left: 52%; 
+} 
+
+.p23 {
+    bottom: 25%;
+    position: absolute;
+    left: 62.5%; 
+} 
+
+.p8 {
+    bottom: 37.5%;
+    position: absolute;
+    left: 37.5%; 
+} 
+
+.p21 {
+    bottom: 37.5%;
+    position: absolute;
+    left: 52%; 
+} 
+
+.p20 {
+    bottom: 52%;
+    position: absolute;
+    left: 45%; 
+} 
+
+.p10 {
+    bottom: 62%;
+    position: absolute;
+    left: 62.5%; 
+} 
+
+.p14 {
+    bottom: 62%;
+    position: absolute;
+    left: 27.5%; 
+} 
+
+.p7 {
+    bottom: 70%;
+    position: absolute;
+    left: 45%; 
+} 
+
+

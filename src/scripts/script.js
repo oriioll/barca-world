@@ -26,9 +26,21 @@ function setColorsToFcb() {
 
     // hr and main title styling
     const hr = document.querySelector('.carrousel hr');
+    const hrr = document.querySelector('.field hr');
     const h2 = document.querySelector('.carrousel h2');
+    const h22 = document.querySelector('.field h2');
     if (hr) hr.style.background = 'var(--fcb-gold)';
+
+    // SVG field stroke color (set both group and svg to keep it consistent)
+    const fieldSvgGroup = document.querySelector('#fieldSvg g');
+    const fieldSvg = document.getElementById('fieldSvg');
+    if (fieldSvgGroup) fieldSvgGroup.style.stroke = 'var(--fcb-numbers)';
+    if (fieldSvg) fieldSvg.style.stroke = 'var(--fcb-numbers)';
     if (h2) h2.style.color = 'var(--fcb-gold)';
+    if (hrr) hrr.style.background = 'var(--fcb-gold)';
+    if (h22) h22.style.color = 'var(--fcb-gold)';
+    // already set above to numbers color
+
 
     // headings (section titles)
     const h3 = document.querySelectorAll('.carrousel h3');
@@ -87,9 +99,20 @@ function setColorsToKobe() {
     }
 
     const hr = document.querySelector('.carrousel hr');
+    const hrr = document.querySelector('.field hr');
     const h2 = document.querySelector('.carrousel h2');
+    const h22 = document.querySelector('.field h2');
     if (hr) hr.style.background = 'var(--accent-ui-away)';
+
+    // SVG field stroke color for Kobe theme (set both group and svg)
+    const fieldSvgGroup = document.querySelector('#fieldSvg g');
+    const fieldSvg = document.getElementById('fieldSvg');
+    if (fieldSvgGroup) fieldSvgGroup.style.stroke = 'var(--accent-ui-away)';
+    if (fieldSvg) fieldSvg.style.stroke = 'var(--accent-ui-away)';
+    if (hrr) hrr.style.background = 'var(--accent-ui-away)';
     if (h2) h2.style.color = 'var(--accent-ui-away)';
+    if (h22) h22.style.color = 'var(--accent-ui-away)';
+    // (already set above to the correct numbers color)
 
     const h3 = document.querySelectorAll('.carrousel h3');
     h3.forEach(h => {
@@ -146,9 +169,20 @@ function setColorsToTotal90() {
     }
 
     const hr = document.querySelector('.carrousel hr');
+    const hrr = document.querySelector('.field hr');
     const h2 = document.querySelector('.carrousel h2');
+    const h22 = document.querySelector('.field h2');
     if (hr) hr.style.background = 'var(--fcb-numbers-third)';
+
+    // SVG field stroke color for Total90 theme (set both group and svg)
+    const fieldSvgGroup = document.querySelector('#fieldSvg g');
+    const fieldSvg = document.getElementById('fieldSvg');
+    if (fieldSvgGroup) fieldSvgGroup.style.stroke = 'var(--fcb-numbers-third)';
+    // stroke already set above to numbers color
+    if (hrr) hrr.style.background = 'var(--fcb-numbers-third)';
     if (h2) h2.style.color = 'var(--fcb-numbers-third)';
+    if (h22) h22.style.color = 'var(--fcb-numbers-third)';
+    if (fieldSvg) fieldSvg.style.stroke = 'var(--fcb-numbers-third)';
 
     const h3 = document.querySelectorAll('.carrousel h3');
     h3.forEach(h => {
@@ -255,3 +289,10 @@ function handlePlayerInfoDisplay(nameTextColor, numberColor, numberFont) {
 document.addEventListener('DOMContentLoaded', () => {
     setColorsToFcb(); 
 });
+
+const players = {
+    goalkeeper: "Joan Garcia",
+    defenders: ["Koundé", "Cubarsí", "Eric García", "Balde"],
+    midfielders: ["De Jong", "Pedri", "Olmo"],
+    forwards: ["Lamine Yamal", "Ferran Torres", "Marcus Rashford"]
+};
